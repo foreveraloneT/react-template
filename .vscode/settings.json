@@ -1,4 +1,12 @@
 {
+  "stylint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.packageManager": "npm",
   "editor.tabSize": 2,

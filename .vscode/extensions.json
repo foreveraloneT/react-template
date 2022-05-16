@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "abumalick.vscode-nvm"
+    "abumalick.vscode-nvm",
+    "stylelint.vscode-stylelint"
   ]
 }
