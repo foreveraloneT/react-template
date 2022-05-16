@@ -44,7 +44,8 @@
     "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint '**/*.scss'",
     "stylelint:fix": "npm run stylelint -- --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "npm run stylelint && npm run eslint"
   },
   "eslintConfig": {
     "extends": [
