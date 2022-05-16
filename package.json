@@ -20,6 +20,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -37,9 +39,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "eslint": "eslint './src/**/*.{ts,tsx}'",
-    "eslint:fix": "npm run eslint -- --fix", 
+    "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint '**/*.scss'",
-    "stylelint:fix": "npm run stylelint -- --fix"
+    "stylelint:fix": "npm run stylelint -- --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -62,5 +65,13 @@
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run eslint:fix"
+    ],
+    "src/**/*.{css,scss}": [
+      "npm run stylelint:fix"
+    ]
   }
 }
